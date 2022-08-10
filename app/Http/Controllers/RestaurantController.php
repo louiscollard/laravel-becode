@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
@@ -14,7 +15,7 @@ class RestaurantController extends Controller
     public function index()
     {
         //
-        return view('/restaurants/index');
+        return view('/restaurants/index', ['restaurants' => Restaurant::latest()->get()]);
     }
 
     /**
@@ -45,11 +46,11 @@ class RestaurantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Restaurant $restaurant)
     {
         //
         return view('/restaurants/show', [
-            'id' => $id
+            dd($restaurant)
         ]);
     }
 

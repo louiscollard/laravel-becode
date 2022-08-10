@@ -8,5 +8,17 @@
 </head>
 <body>
    <h1>This is index !</h1>
+
+   @foreach($restaurants as $restaurant)
+    <h2>{{ $restaurant->name }}</h2>
+    <p>
+      {{ $restaurant->address }}</br>
+      {{ $restaurant->zipCode }}</br>
+      {{ $restaurant->town }}</br>
+      {{ $restaurant->country }}</br>
+      {{ $restaurant->description }}</br>
+      {{ $restaurant->review }}</br>
+   </p>
+   @endforeach
 </body>
 </html>
