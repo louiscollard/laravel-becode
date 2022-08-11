@@ -19,8 +19,10 @@ Route::get('/', function () {
 });
 
 Route::get('/restaurants', [RestaurantController::class, 'index']);
-Route::get('/restaurants/{restaurant:id}', [RestaurantController::class, 'show']);
 Route::get('/restaurants/create', [RestaurantController::class, 'create']);
-Route::post('/restaurants', [RestaurantController::class, 'create']);
+Route::post('/restaurants', [RestaurantController::class, 'store']);
+// Route::post('/restaurants', [RestaurantController::class, 'create']);
+
 Route::put('/restaurants/{restaurant:id}/edit', [RestaurantController::class, 'edit']);
+
 Route::delete('/restaurants/{restaurant:id}', [RestaurantController::class, 'destroy']);

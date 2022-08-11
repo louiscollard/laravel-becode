@@ -9,7 +9,7 @@
 <body>
    <h1>This is show !</h1>
 
-   @foreach($restaurants as $key => $restaurant)
+   @foreach($restaurants as $restaurant)
     <h2>{{ $restaurant->name }}</h2>
     <p>
       {{ $restaurant->address }}</br>
