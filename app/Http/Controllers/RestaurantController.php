@@ -15,7 +15,7 @@ class RestaurantController extends Controller
     public function index()
     {
         //
-        return view('/restaurants/index', ['restaurants' => Restaurant::latest()->get()]);
+        return view('/restaurants/index', ['restaurants' => Restaurant::get()]);
     }
 
     /**
@@ -49,9 +49,7 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant)
     {
         //
-        return view('/restaurants/show', [
-            dd($restaurant)
-        ]);
+        return view('/restaurants/show', ['restaurants' => Restaurant::find($restaurant)]);
     }
 
     /**
