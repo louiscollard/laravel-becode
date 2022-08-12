@@ -19,6 +19,7 @@
       {{ $restaurant->description }}</br>
       {{ $restaurant->review }}</br>
    </p>
+   <a href="/restaurants/{{ $restaurant->id }}/edit">Update Infos</a> 
    @endforeach
 </body>
 </html>

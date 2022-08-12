@@ -67,10 +67,10 @@ class RestaurantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Restaurant $restaurant)
     {
         //
-        return view('/restaurants/index', ['id' => $id]);
+        return view('/restaurants/edit', ['restaurant' => $restaurant]);
     }
 
     /**
@@ -83,6 +83,15 @@ class RestaurantController extends Controller
     public function update(Request $request, $id)
     {
         //
+        Restaurant::find([
+            'name' => $request['name'],
+            'address' => $request['address'],
+            'zipCode' => $request['zipCode'],
+            'town' => $request['town'],
+            'country' => $request['country'],
+            'description' => $request['description'],
+            'review' => $request['review']
+        ])->save();
     }
 
     /**

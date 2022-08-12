@@ -11,21 +11,21 @@
 
    <form method="POST" action="/restaurants">
       @csrf
-      <label for="title">Name :</label>
+      <label for="title">Name :</label><br>
       <input type="text" name="name" id="title" required><br>
-      <label for="title">Address : </label>
+      <label for="title">Address : </label><br>
       <input type="text" name="address" id="title" required><br>
-      <label for="title">Zip code : </label>
+      <label for="title">Zip code : </label><br>
       <input type="text" name="zipCode" id="title" required><br>
-      <label for="title">Town : </label>
+      <label for="title">Town : </label><br>
       <input type="text" name="town" id="title" required><br>
-      <label for="title">Country : </label>
+      <label for="title">Country : </label><br>
       <input type="text" name="country" id="title" required><br>
-      <label for="title">Description : </label>
+      <label for="title">Description : </label><br>
       <input type="text" name="description" id="title" required><br>
-      <label for="title">Review : </label>
-      <input type="text" name="review" id="title" required><br>
-      <input type="submit" value="Submit"></input> 
+      <label for="title">Review : </label><br>
+      <input type="text" name="review" id="title" required><br><br>
+      <input type="submit" value="Submit"></input>
    </form>
 </body>
 </html>
